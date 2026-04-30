@@ -32,3 +32,10 @@ User Profiling
 *Check out activity feed
 
 Favorites/Following
+
+## Important Commands
+### Run tests
+- in /frontend (jest)
+```bash
+npm test -- --coverage --coverageReporters=text --coverageDirectory=none
+```
