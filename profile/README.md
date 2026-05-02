@@ -34,8 +34,33 @@ User Profiling
 Favorites/Following
 
 ## Important Commands
+### Run Backend
+- Our backend is containerized with Docker, and can be built and run with the following command
+```bash
+docker build -t hiddengems-backend .
+docker run --env-file .env -p 8080:8080 hiddengems-backend .
+```
+
+### Run Frontend
+- We use Expo (React Native) for both our web and mobile frontends, you can run both with
+```bash
+npx expo start
+```
+
+- Alternatively, flags can be used to only run a specific version of the frontend
+```bash
+npx expo start -w
+npx expo start --web //web
+
+npx expo start -a
+npx expo start --android //android
+```
+
 ### Run tests
 - in /frontend (jest)
 ```bash
 npm test -- --coverage --coverageReporters=text --coverageDirectory=none
 ```
+
+## Hosting
+- Backend hosted with Render at https://backend-vjot.onrender.com/
