@@ -14,34 +14,22 @@ Users pin and review spots that aren't on mainstream apps like secret study spot
 - JUnit
 
 ## How to Run
-*Login/Auth
-User Profiling
+### Hosted
+#### Backend
+- Backend hosted with Render at https://backend-vjot.onrender.com/
 
-*Setup Account setting and prefernces
+#### Frontend
+- Frontend hosted with Render at https://frontend-project3-cst438.onrender.com/
 
-*Geospatial search with filtering
-
-*Approve, feature, or remove locations
-
-*Submit reviews with star ratings
-
-*Follow/Unfollow other users
-
-*View public profiles
-
-*Check out activity feed
-
-Favorites/Following
-
-## Important Commands
-### Run Backend
+### Local
+#### Run Backend
 - Our backend is containerized with Docker, and can be built and run with the following command
 ```bash
 docker build -t hiddengems-backend .
 docker run --env-file .env -p 8080:8080 hiddengems-backend .
 ```
 
-### Run Frontend
+#### Run Frontend
 - We use Expo (React Native) for both our web and mobile frontends, you can run both with
 ```bash
 npx expo start
@@ -61,6 +49,7 @@ npx expo start --android //android
 ```bash
 npm test -- --coverage --coverageReporters=text --coverageDirectory=none
 ```
-
-## Hosting
-- Backend hosted with Render at https://backend-vjot.onrender.com/
+- in /backend (JUnit)
+```bash
+./gradlew test
+```
